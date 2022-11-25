@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock title %}
+
+{% block content %}
+<body class="container home-container" >
+
+    <header class="row ml-lg-5 d-flex justify-content-center">
+        <div class="col-12 col-lg-6"></div>
+        <div class="col-12 col-lg-6">
+            <div class="row ml-lg-5">
+                <div class="col-11 mt-5 pb-4">
+                    <h1 class="text-center mt-5">Codage et décodage avec la méthode César</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-bg">
+        <div class="row ml-lg-5 d-flex justify-content-center align-items-center my-5">
+            <div class="col-12 col-lg-6"></div>
+            <div class="col-12 col-lg-6 text-center">
+                <div class="text-center mb-5">
+                     <a class="font-italic" href="/logout">Se déconnecter</a>
+                </div>
+                <div class="row ml-lg-5">
+                    <div class="col-11 msg py-4">
+                        <form method="POST" action="/codage" id="codage">
+                            <div class="form-group">
+                                <label for="message">Entrez votre message à coder: </label>
+                                <input type="text" class="form-control" id="message" name="message">
+                            </div>
+                            <div class="form-group">
+                                <select name="decalageCode" class="form-control" id="decalageCode">
+                                    <option> -- Sélectionner un décalage -- </option>
+                                    <option value="2">2</option>
+                                    <option value="8">8</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn custom-btn">Valider</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row ml-lg-5 d-flex justify-content-center align-items-center my-5">
+            <div class="col-12 col-lg-6"></div>
+            <div class="col-12 col-lg-6 text-center">
+                <div class="row ml-lg-5">
+                    <div class="col-11 msg py-4">
+                        <form method="POST" action="/decodage" id="decodage">
+                            <div class="form-group">
+                                <label for="messageCode">Entrez votre message à décoder: </label>
+                                <input type="text" class="form-control" id="messageCode" name="messageCode" >
+                            </div>
+                            <div class="form-group">
+                                <select name="decalageDecode" class="form-control" id="decalageDecode">
+                                    <option> -- Sélectionner un décalage -- </option>
+                                    <option value="2">2</option>
+                                    <option value="8">8</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn custom-btn">Valider</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Codage avec la méthode César{% endblock title %}
+
+{% block content %}
+<body class="container home-container">
+
+    <header class="row ml-lg-5 d-flex justify-content-center">
+        <div class="col-12 col-lg-6"></div>
+        <div class="col-12 col-lg-6">
+            <h1 class="text-center mt-5"><a href="/">Codage avec la méthode César</a></h1>
+        </div>
+    </header>
+
+    <main class="row ml-md-5 d-flex justify-content-center align-items-center main-bg">
+        <div class="col-12 col-lg-6"></div>
+        <div class="col-12 col-lg-6 text-center">
+            <div class="text-center mb-5">
+                <a class="font-italic" href="/">Revenir à l'accueil</a>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 msg mb-5 pt-4">
+                    <h2 class="">Message non codé : </h2>
+                    <p>
+                        {{ messageNonCodeHtml }}
+                    </p>
+                </div>
+
+                <div class="col-8 msg pt-4">
+                    <h2 class="text-center">Message codé : </h2>
+                    <p>
+                        {{ messageCodeHtml }}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+{% endblock content %}
